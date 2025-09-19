@@ -1,4 +1,17 @@
 import "./globals.css";
+import localFont from "next/font/local";
+
+const uncutSans = localFont({
+  src: [
+    {
+      path: "../../public/fonts/UncutSans-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--uncut-sans",
+  display: "swap",
+});
 
 export default function RootLayout({
   children,
@@ -7,9 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

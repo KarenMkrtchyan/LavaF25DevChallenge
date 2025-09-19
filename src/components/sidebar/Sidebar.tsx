@@ -15,6 +15,7 @@ import {
   IntegrationsIconActive,
   IntegrationsIconInactive,
 } from "../icons/Icons";
+import "./sidebar.css";
 
 const nav = [
   {
@@ -48,28 +49,40 @@ export default function Sidebar() {
   const expand = useState(false);
 
   return (
-    <nav className="space-y-1">
-      {nav.map((item) => {
-        const active = pathname === item.href;
-        return (
-          <div className="flex flex-row items-center gap-3" key={item.href}>
-            {active ? item.active_icon : item.inactive_icon}
-            <Link
-              key={item.href}
-              href={item.href}
-              aria-current={active ? "page" : undefined}
-              className={[
-                "block rounded px-3 py-2 transition",
-                active
-                  ? "bg-foreground/10 font-medium"
-                  : "hover:bg-foreground/5",
-              ].join(" ")}
-            >
-              {item.label}
-            </Link>
-          </div>
-        );
-      })}
+    <nav>
+      <div className="flex flex-col gap-4[px]">
+        <div className="icon_div">
+          <Logo />
+          <h1 className="icon_text">Tally</h1>
+        </div>
+        <div className="flex flex-col gap-[8px] pt-[8px] pb-[8px]">
+          {nav.map((item) => {
+            const active = pathname === item.href;
+            return (
+              <div
+                className={`nav_item last:mt-4 last:pt-4
+          last:border-t last:border-neutral-200 ${
+            active ? "nav_item_active" : ""
+          }`}
+                key={item.href}
+              >
+                {active ? item.active_icon : item.inactive_icon}
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  aria-current={active ? "page" : undefined}
+                >
+                  {item.label}
+                </Link>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div>
+        <button className="sidebar_button">Logout</button>
+      </div>
     </nav>
   );
 }
