@@ -1,0 +1,60 @@
+:root {
+  --border-color: rgba(212, 212, 212, 1); /* Tailwind's gray-300 */
+}
+
+.count_button {
+  height: 48px;
+  width: 48px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.left_button {
+  border-radius: 4px 0 0 4px;
+  border-left: 1px solid var(--border-color);
+}
+
+.right_button {
+  border-radius: 0 4px 4px 0;
+  border-right: 1px solid var(--border-color);
+}
+
+.center_text {
+  text-align: center;
+  width: 100px;
+  height: 48px;
+}
+
+.center_text_valid {
+  border: 1px solid var(--border-color);
+}
+
+.center_text_invalid {
+  border: 1px solid rgba(193, 154, 77, 1);
+  background-color: rgba(250, 242, 227, 1);
+  /* z-index: 10; */
+}
+
+.center_text_count {
+  font-size: 20px;
+  height: 32px;
+}
+
+.center_text_inventory {
+  font-size: 12px;
+  height: 16px;
+  color: rgba(128, 128, 128, 1);
+
+  background-color: rgb(242, 242, 242);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+
+  /* z-index: 11; */
+}
+
+.center_text_inventory_invalid {
+  background-color: rgba(193, 154, 77, 1);
+  color: rgba(250, 250, 250, 1);
+  border-top: 1px solid rgba(193, 154, 77, 1);
+  border-bottom: 1px solid rgba(193, 154, 77, 1);
+}
