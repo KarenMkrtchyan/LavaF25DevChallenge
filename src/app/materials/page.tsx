@@ -24,9 +24,9 @@ export default function Materials() {
       <div>
         <div className="flex flex-row justify-between items-center h-[60px] px-[8px]">
           <SearchBar searchText={searchTerm} setSearchText={setSearchTerm} />
-          <button className="add_new">
+          <button className="add_new flex flex-row justify-center items-center gap-[8px]">
             <PlusSmall />
-            Add New
+            <p>Add New</p>
           </button>
         </div>
         {/* Materials List Component */}

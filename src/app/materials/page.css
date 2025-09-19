@@ -4,4 +4,10 @@
   color: white;
   background-color: rgba(68, 78, 170, 1);
   border-radius: 4px;
+  font-size: 14px;
+}
+
+.add_new:hover {
+  background-color: rgba(68, 78, 170, 0.9);
+  cursor: pointer;
 }
