@@ -16,10 +16,11 @@ interface Material {
 
 export default function Materials() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [tab, setTab] = useState<"inventory" | "queue">("inventory");
   console.log(producitListings);
   return (
     <div className="material_div">
-      <CardTitle title="Blanks" />
+      <CardTitle title="Blanks" tab={tab} setTab={setTab} />
 
       <div className="material_list_container">
         {/* Search tools Component */}
@@ -32,20 +33,26 @@ export default function Materials() {
         </div>
 
         {/* Materials List Component */}
-        <div>
-          {producitListings.map((product: Material) => {
-            if (product.name.toLowerCase().includes(searchTerm.toLowerCase())) {
-              return (
-                <MaterialListing
-                  key={product.id}
-                  name={product.name}
-                  pic={product.image}
-                  inventoryCount={product.required}
-                />
-              );
-            }
-          })}
-        </div>
+        {tab === "inventory" ? (
+          <div>
+            {producitListings.map((product: Material) => {
+              if (
+                product.name.toLowerCase().includes(searchTerm.toLowerCase())
+              ) {
+                return (
+                  <MaterialListing
+                    key={product.id}
+                    name={product.name}
+                    pic={product.image}
+                    inventoryCount={product.required}
+                  />
+                );
+              }
+            })}
+          </div>
+        ) : (
+          <div>In dha wurks</div>
+        )}
       </div>
     </div>
   );

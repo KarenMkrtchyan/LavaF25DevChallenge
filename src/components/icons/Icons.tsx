@@ -6,12 +6,11 @@ import placeholder from "./Placeholder.svg";
 import indicatorPositive from "./Indicator_Positive.svg";
 import indicatorNegative from "./Indicator_Negative.svg";
 import indicatorNetural from "./Indicator_Netural.svg";
-
 import check from "./Check.svg";
 import plus from "./Plus.svg";
 import homeActive from "./Home_Active.svg";
 import homeInactive from "./Home_Inactive.svg";
-
+import logOutIcon from "./logOutIcon.svg";
 import linkIcon from "./Link.svg";
 import searchIcon from "./Search_Icon.svg";
 
@@ -27,6 +26,12 @@ import productsIconInactiveSvg from "./Sidebar_Icons/Products_Icon_Inactive.svg"
 
 export function Logo() {
   return <Image className="w-[36px] h-[36px]" src={logo} alt="Logo icon" />;
+}
+
+export function LogOutIcon() {
+  return (
+    <Image className="w-[36px] h-[36]px]" src={logOutIcon} alt="Log Out icon" />
+  );
 }
 
 export function UpDownArrows() {

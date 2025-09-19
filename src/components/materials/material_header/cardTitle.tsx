@@ -5,9 +5,13 @@ import { useState } from "react";
 import styles from "./cardTitle.module.css";
 import SegmentedToggle from "./SegmentToggle";
 
-export default function CardTitle({ title }: { title: string }) {
-  const [tab, setTab] = useState<"inventory" | "queue">("inventory");
+interface CardTitleProps {
+  title: string;
+  tab: "inventory" | "queue";
+  setTab: (tab: "inventory" | "queue") => void;
+}
 
+export default function CardTitle({ title, tab, setTab }: CardTitleProps) {
   return (
     <div className="flex flex-row justify-between items-center h-[60px] px-[8px] mb-[24px]">
       <div className="flex flex-row gap-[8px]">

@@ -5,7 +5,7 @@ interface MyComponentProps {
 
 export default function ProductDescription({ name, pic }: MyComponentProps) {
   return (
-    <div className="flex flex-row justify-center items-center">
+    <div className="flex flex-row justify-center items-center gap-[16px]">
       <div className="product_image_container">
         <img className="w-[34px] h-[34px]" src={pic} />
       </div>
