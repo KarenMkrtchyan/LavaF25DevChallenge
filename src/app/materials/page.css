@@ -11,3 +11,9 @@
   background-color: rgba(68, 78, 170, 0.9);
   cursor: pointer;
 }
+
+.material_div {
+  display: flex;
+  flex-direction: column;
+  max-width: 1120px;
+}

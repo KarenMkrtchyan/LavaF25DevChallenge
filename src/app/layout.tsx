@@ -1,5 +1,6 @@
 import "./globals.css";
 import localFont from "next/font/local";
+import { Chivo_Mono } from "next/font/google";
 
 const uncutSans = localFont({
   src: [
@@ -9,7 +10,14 @@ const uncutSans = localFont({
       style: "normal",
     },
   ],
-  variable: "--uncut-sans",
+  variable: "--font-uncut-sans",
+  display: "swap",
+});
+
+const chivoMono = Chivo_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-chivo-mono",
   display: "swap",
 });
 
@@ -19,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={uncutSans.variable}>
       <body>{children}</body>
     </html>
   );

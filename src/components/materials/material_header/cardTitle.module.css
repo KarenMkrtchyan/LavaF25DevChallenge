@@ -1,0 +1,13 @@
+.main_title {
+  color: #1a1a1a;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.secondary_title {
+  color: #aaa;
+  font-size: 24px;
+  /* font-weight: 500; */
+  line-height: normal;
+}

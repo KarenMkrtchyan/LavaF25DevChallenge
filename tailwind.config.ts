@@ -10,7 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-my-sans)", "system-ui", "sans-serif"],
+        sans: ["var(--font-uncut-sans)", "sans-serif"],
+        mono: ["var(--font-chivo-mono)", "monospace"],
       },
     },
   },

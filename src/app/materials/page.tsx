@@ -2,7 +2,8 @@
 import { useState } from "react";
 import producitListings from "./products.json"; // TODO: Load this from DB
 import MaterialListing from "@/components/materials/material_listing/MaterialListing";
-import SearchBar from "@/components/materials/material_search/SearchBar";
+import SearchBar from "@/components/materials/material_header/SearchBar";
+import CardTitle from "@/components/materials/material_header/cardTitle";
 import { PlusSmall } from "@/components/icons/Icons";
 import "./page.css";
 
@@ -17,9 +18,8 @@ export default function Materials() {
   const [searchTerm, setSearchTerm] = useState("");
   console.log(producitListings);
   return (
-    <div>
-      {/* Header component */}
-      <h1>Materials / Blanks</h1>
+    <div className="material_div">
+      <CardTitle title="Blanks" />
 
       <div>
         <div className="flex flex-row justify-between items-center h-[60px] px-[8px]">

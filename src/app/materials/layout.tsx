@@ -10,7 +10,7 @@ export default function DashboardLayout({
     <div className="min-h-screen grid md:grid-cols-[240px_1fr]">
       <Sidebar />
 
-      <main className="p-4">{children}</main>
+      <main className="p-[36px]">{children}</main>
     </div>
   );
 }
