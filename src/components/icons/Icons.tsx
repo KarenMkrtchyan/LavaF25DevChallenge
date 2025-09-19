@@ -6,19 +6,28 @@ import placeholder from "./Placeholder.svg";
 import indicatorPositive from "./Indicator_Positive.svg";
 import indicatorNegative from "./Indicator_Negative.svg";
 import indicatorNetural from "./Indicator_Netural.svg";
-import elementsInactive from "./Elements_Inactive.svg";
-import productsActive from "./Products_Active.svg";
+
 import check from "./Check.svg";
 import plus from "./Plus.svg";
 import homeActive from "./Home_Active.svg";
 import homeInactive from "./Home_Inactive.svg";
-import ordersActive from "./Orders_Active.svg";
-import ordersInactive from "./Orders_Inactive.svg";
+
 import linkIcon from "./Link.svg";
-import integrationsActive from "./Integrations_Active.svg";
-import integrationsInactive from "./Integrations_Inactive.svg";
-import componentsActive from "./Components_Active.svg";
-import productsActiveDuplicate from "./Products_Active.svg";
+
+import logo from "./Tally_Icon.svg";
+
+import materialsIconInactiveSvg from "./Sidebar_Icons/Materials_Icon_Inactive.svg";
+import materialsIconActiveSvg from "./Sidebar_Icons/Materials_Icon_active.svg";
+import fulfillmentIconActiveSvg from "./Sidebar_Icons/Fulfillment_Icon_Active.svg";
+import fulfillmentIconInactiveSvg from "./Sidebar_Icons/Fulfillment_Icon_Inactive.svg";
+import integrationsIconActiveSvg from "./Sidebar_Icons/Integrations_Icon_Active.svg";
+import integrationsIconInactiveSvg from "./Sidebar_Icons/Integrations_Icon_Inactive.svg";
+import productsIconActiveSvg from "./Sidebar_Icons/Products_Icon_Active.svg";
+import productsIconInactiveSvg from "./Sidebar_Icons/Products_Icon_Inactive.svg";
+
+export function Logo() {
+  return <Image className="w-[36px] h-[36px]" src={logo} alt="Logo icon" />;
+}
 
 export function UpDownArrows() {
   return (
@@ -74,22 +83,42 @@ export function IndicatorNetural() {
   );
 }
 
-export function ElementsInactive() {
+export function MaterialsIconInactive() {
   return (
     <Image
       className="w-[24px] h-[24px]"
-      src={elementsInactive}
-      alt="Elements Inactive icon"
+      src={materialsIconInactiveSvg}
+      alt="Materials Inactive icon"
     />
   );
 }
 
-export function ProductsActive() {
+export function MaterialsIconActive() {
   return (
     <Image
       className="w-[24px] h-[24px]"
-      src={productsActive}
+      src={materialsIconActiveSvg}
+      alt="Materials Active icon"
+    />
+  );
+}
+
+export function ProductsIconActive() {
+  return (
+    <Image
+      className="w-[24px] h-[24px]"
+      src={productsIconActiveSvg}
       alt="Products Active icon"
+    />
+  );
+}
+
+export function ProductsIconInactive() {
+  return (
+    <Image
+      className="w-[24px] h-[24px]"
+      src={productsIconInactiveSvg}
+      alt="Products Inactive icon"
     />
   );
 }
@@ -126,22 +155,22 @@ export function HomeInactive() {
   );
 }
 
-export function OrdersActive() {
+export function FulfillmentIconActive() {
   return (
     <Image
       className="w-[24px] h-[24px]"
-      src={ordersActive}
-      alt="Orders Active icon"
+      src={fulfillmentIconActiveSvg}
+      alt="Fulfillment Active icon"
     />
   );
 }
 
-export function OrdersInactive() {
+export function FulfillmentIconInactive() {
   return (
     <Image
       className="w-[24px] h-[24px]"
-      src={ordersInactive}
-      alt="Orders Inactive icon"
+      src={fulfillmentIconInactiveSvg}
+      alt="Fulfillment Inactive icon"
     />
   );
 }
@@ -150,32 +179,22 @@ export function LinkIcon() {
   return <Image className="w-[24px] h-[24px]" src={linkIcon} alt="Link icon" />;
 }
 
-export function IntegrationsActive() {
+export function IntegrationsIconActive() {
   return (
     <Image
       className="w-[24px] h-[24px]"
-      src={integrationsActive}
+      src={integrationsIconActiveSvg}
       alt="Integrations Active icon"
     />
   );
 }
 
-export function IntegrationsInactive() {
+export function IntegrationsIconInactive() {
   return (
     <Image
       className="w-[24px] h-[24px]"
-      src={integrationsInactive}
+      src={integrationsIconInactiveSvg}
       alt="Integrations Inactive icon"
-    />
-  );
-}
-
-export function ComponentsActive() {
-  return (
-    <Image
-      className="w-[24px] h-[24px]"
-      src={componentsActive}
-      alt="Components Active icon"
     />
   );
 }
