@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={uncutSans.variable}>
+    <html lang="en" className={`${uncutSans.variable} ${chivoMono.variable}`}>
       <body>{children}</body>
     </html>
   );

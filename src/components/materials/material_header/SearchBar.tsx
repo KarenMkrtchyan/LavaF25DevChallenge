@@ -1,6 +1,7 @@
-"use clinet";
+"use client";
 
-import { Filter, UpDownArrows } from "@/components/icons/Icons";
+import { Filter, UpDownArrows, SearchIcon } from "@/components/icons/Icons";
+import styles from "./SearchBar.module.css";
 
 interface SearchBarProps {
   searchText: string;
@@ -13,13 +14,17 @@ export default function SearchBar({
 }: SearchBarProps) {
   return (
     <div className="flex flex-row justify-start items-center gap-[16px]">
-      <input
-        type="text"
-        placeholder="Search materials"
-        value={searchText}
-        onChange={(e) => setSearchText(e.target.value)}
-        className="border p-2 rounded w-[360px]"
-      />
+      <div className={`${styles.search_bar}`}>
+        <SearchIcon />
+        <input
+          id="search"
+          type="text"
+          placeholder="Search materials"
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+          className="w-[360px]"
+        />
+      </div>
       <div className="flex flex-row justify-start items-center gap-[8px]">
         <button className="cursor-pointer">
           <Filter />

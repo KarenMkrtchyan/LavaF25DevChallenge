@@ -13,9 +13,9 @@ import homeActive from "./Home_Active.svg";
 import homeInactive from "./Home_Inactive.svg";
 
 import linkIcon from "./Link.svg";
+import searchIcon from "./Search_Icon.svg";
 
 import logo from "./Tally_Icon.svg";
-
 import materialsIconInactiveSvg from "./Sidebar_Icons/Materials_Icon_Inactive.svg";
 import materialsIconActiveSvg from "./Sidebar_Icons/Materials_Icon_active.svg";
 import fulfillmentIconActiveSvg from "./Sidebar_Icons/Fulfillment_Icon_Active.svg";
@@ -110,6 +110,12 @@ export function ProductsIconActive() {
       src={productsIconActiveSvg}
       alt="Products Active icon"
     />
+  );
+}
+
+export function SearchIcon() {
+  return (
+    <Image className="w-[16px] h-[16px]" src={searchIcon} alt="Search icon" />
   );
 }
 

@@ -21,7 +21,8 @@ export default function Materials() {
     <div className="material_div">
       <CardTitle title="Blanks" />
 
-      <div>
+      <div className="material_list_container">
+        {/* Search tools Component */}
         <div className="flex flex-row justify-between items-center h-[60px] px-[8px]">
           <SearchBar searchText={searchTerm} setSearchText={setSearchTerm} />
           <button className="add_new flex flex-row justify-center items-center gap-[8px]">
@@ -29,6 +30,7 @@ export default function Materials() {
             <p>Add New</p>
           </button>
         </div>
+
         {/* Materials List Component */}
         <div>
           {producitListings.map((product: Material) => {
