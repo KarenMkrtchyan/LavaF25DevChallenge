@@ -1,20 +1,20 @@
 [
-	{
-		"id": 1,
-		"name": "Gildan T-Shirt - Red / M",
-		"image": "/images/material_a.jpg",
-		"required": 24
-	},
-	{
-		"id": 2,
-		"name": "Gildan T-Shirt - Red / L",
-		"image": "/images/material_a.jpg",
-		"required": 24
-	},
-	{
-		"id": 3,
-		"name": "Gildan T-Shirt - Black / M",
-		"image": "/images/material_a.jpg",
-		"required": 24
-	}
+  {
+    "id": 1,
+    "name": "Gildan T-Shirt - Red / M",
+    "image": "/red_shirt.png",
+    "required": 24
+  },
+  {
+    "id": 2,
+    "name": "Gildan T-Shirt - Red / L",
+    "image": "/red_shirt.png",
+    "required": 24
+  },
+  {
+    "id": 3,
+    "name": "Gildan T-Shirt - Black / M",
+    "image": "/images/material_a.jpg",
+    "required": 24
+  }
 ]
