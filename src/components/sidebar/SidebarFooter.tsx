@@ -23,7 +23,7 @@ export default function SidebarFooter() {
       <div className="flex flex-row items-center justify-between">
         <div className="flex flex-row items-center justify-between gap-[8px]">
           <Image
-            src="/sexyboy.png" // put an image in /public/static/profile.jpg
+            src="/karen_profile.jpg" // put an image in /public/static/profile.jpg
             alt="Profile picture"
             width={40}
             height={40}
