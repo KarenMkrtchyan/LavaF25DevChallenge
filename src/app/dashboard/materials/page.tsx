@@ -4,20 +4,23 @@ import producitListings from "./products.json"; // TODO: Load this from DB
 import MaterialListing from "@/components/materials/material_listing/MaterialListing";
 import SearchBar from "@/components/materials/material_header/SearchBar";
 import CardTitle from "@/components/materials/material_header/cardTitle";
-import { PlusSmall } from "@/components/icons/Icons";
+import AddNewButton from "@/components/materials/material_header/AddNewButton";
 import "./page.css";
+import Material from "@/types/Material";
 
-interface Material {
-  id: number;
-  name: string;
-  image: string;
-  required: number;
-}
+import { useAppDispatch, useAppSelector } from "@/store";
+import { addItem, updateQuantity, setAll } from "@/store/itemsSlice";
 
 export default function Materials() {
   const [searchTerm, setSearchTerm] = useState("");
   const [tab, setTab] = useState<"inventory" | "queue">("inventory");
-  console.log(producitListings);
+  const items = useAppSelector((state) => state.items);
+  const dispatch = useAppDispatch();
+
+  const handleAddItem = (newItem: Material) => {
+    dispatch(addItem(newItem));
+  };
+
   return (
     <div className="material_div">
       <CardTitle title="Blanks" tab={tab} setTab={setTab} />
@@ -26,27 +29,17 @@ export default function Materials() {
         {/* Search tools Component */}
         <div className="flex flex-row justify-between items-center h-[60px] px-[8px]">
           <SearchBar searchText={searchTerm} setSearchText={setSearchTerm} />
-          <button className="add_new flex flex-row justify-center items-center gap-[8px]">
-            <PlusSmall />
-            <p>Add New</p>
-          </button>
+          <AddNewButton onAdd={handleAddItem} />
         </div>
 
         {/* Materials List Component */}
         {tab === "inventory" ? (
           <div>
-            {producitListings.map((product: Material) => {
+            {items.map((product: Material) => {
               if (
                 product.name.toLowerCase().includes(searchTerm.toLowerCase())
               ) {
-                return (
-                  <MaterialListing
-                    key={product.id}
-                    name={product.name}
-                    pic={product.image}
-                    inventoryCount={product.required}
-                  />
-                );
+                return <MaterialListing key={product.id} item={product} />;
               }
             })}
           </div>

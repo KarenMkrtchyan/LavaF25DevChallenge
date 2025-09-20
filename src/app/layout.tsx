@@ -1,6 +1,8 @@
 import "./globals.css";
 import localFont from "next/font/local";
 import { Chivo_Mono } from "next/font/google";
+import Providers from "@/store/Providers";
+import { store } from "@/store";
 
 const uncutSans = localFont({
   src: [
@@ -28,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${uncutSans.variable} ${chivoMono.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

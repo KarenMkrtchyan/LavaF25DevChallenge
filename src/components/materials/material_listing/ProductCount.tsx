@@ -1,12 +1,9 @@
 "use client";
 import { useState } from "react";
 import "./materials.css";
+import Material from "../../../types/Material";
 
-interface MyComponentProps {
-  inventoryCount: number;
-}
-
-export default function ProductCount({ inventoryCount }: MyComponentProps) {
+export default function ProductCount({ item }: { item: Material }) {
   const [selectedCount, setSelectedCount] = useState(0);
 
   const handleMinusClick = () => {
@@ -24,7 +21,7 @@ export default function ProductCount({ inventoryCount }: MyComponentProps) {
       </button>
       <div
         className={`center_text ${
-          selectedCount > inventoryCount
+          selectedCount > item.required
             ? "center_text_invalid"
             : "center_text_valid"
         }`}
@@ -32,12 +29,10 @@ export default function ProductCount({ inventoryCount }: MyComponentProps) {
         <p className="center_text_count">{selectedCount}</p>
         <p
           className={`center_text_inventory ${
-            selectedCount > inventoryCount
-              ? "center_text_inventory_invalid"
-              : ""
+            selectedCount > item.required ? "center_text_inventory_invalid" : ""
           }`}
         >
-          {inventoryCount} PCS
+          {item.required} PCS
         </p>
       </div>
       <button className="count_button right_button" onClick={handlePlusClick}>
