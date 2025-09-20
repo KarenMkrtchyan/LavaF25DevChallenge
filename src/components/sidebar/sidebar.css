@@ -26,13 +26,18 @@ nav:hover {
   color: rgb(128, 128, 128);
 }
 
+.nav_item:hover {
+  border-radius: 4px;
+  background: #f3f4fc;
+  color: black;
+}
+
 .nav_item_active {
   border-radius: 4px;
   border: 1px solid #dadcee;
   background: #f3f4fc;
   color: black;
 
-  /* Modal */
   box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.05) inset,
     0 2px 4px 0 rgba(0, 0, 0, 0.05);
 }
