@@ -6,9 +6,11 @@ export default function SidebarFooter() {
   return (
     <div className="flex flex-col gap-[8px] p-[6px]">
       {/* Logout button */}
-      <button className="flex flex-row items-center ">
+      <button className="flex flex-row items-center cursor-pointer gap-[8px] p-[6px] hover:bg-gray-100 rounded-md">
         <LogOutIcon />
-        <span className="text-sm font-medium">Logout</span>
+        <span className="text-sm font-medium text-[rgb(169,34,34)]">
+          Logout
+        </span>
       </button>
 
       {/* Profile section */}
@@ -23,9 +25,9 @@ export default function SidebarFooter() {
           />
           <div className="flex justify-between flex-row gap-[10px] ">
             <div className="flex flex-col justify-between">
-              <span className="font-semibold text-[12px]">Don’t Ruin It</span>
+              <span className="font-semibold text-[12px]">I won't!</span>
               <span className="font-light text-[10px] text-[rgba(132,132,132,1)]">
-                Pro Crafter
+                Novice Unmaker
               </span>
             </div>
             <button className="flex justify-center items-center p-1 hover:bg-gray-100 rounded-full">
