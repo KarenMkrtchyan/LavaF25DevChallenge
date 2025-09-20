@@ -7,6 +7,14 @@ nav {
   border-right: 1px solid rgb(217, 217, 217);
   padding: 12px;
   justify-content: space-between;
+  width: 64px; /* collapsed (icons only) */
+  transition: width 0.25s ease;
+  overflow: hidden; /* clip hidden text */
+}
+
+/* expand on hover */
+nav:hover {
+  width: 220px; /* expanded width */
 }
 
 .nav_item {
@@ -36,4 +44,12 @@ nav {
   gap: 4px;
   align-self: stretch;
   color: rgba(68, 78, 170, 1);
+}
+
+.nav_text {
+  display: none;
+}
+
+nav:hover .nav_text {
+  display: inline; /* show text when expanded */
 }

@@ -47,14 +47,13 @@ const nav = [
 
 export default function Sidebar() {
   const pathname = usePathname();
-  const expand = useState(false);
 
   return (
     <nav>
       <div className="flex flex-col gap-4[px]">
         <div className="icon_div">
           <Logo />
-          <h1 className="icon_text">Tally</h1>
+          <h1 className="nav_text icon_text">Tally</h1>
         </div>
         <div className="flex flex-col gap-[8px] pt-[8px] pb-[8px]">
           {nav.map((item) => {
@@ -67,13 +66,14 @@ export default function Sidebar() {
           }`}
                 key={item.href}
               >
-                {active ? item.active_icon : item.inactive_icon}
                 <Link
                   key={item.href}
                   href={item.href}
                   aria-current={active ? "page" : undefined}
+                  className="flex flex-row items-center gap-[8px]"
                 >
-                  {item.label}
+                  {active ? item.active_icon : item.inactive_icon}
+                  {<div className="nav_text">{item.label}</div>}
                 </Link>
               </div>
             );
