@@ -25,7 +25,7 @@ export default function SidebarFooter() {
           />
           <div className="flex justify-between flex-row gap-[10px] ">
             <div className="flex flex-col justify-between">
-              <span className="font-semibold text-[12px]">I won't!</span>
+              <span className="font-semibold text-[12px]">I won&apos;t!</span>
               <span className="font-light text-[10px] text-[rgba(132,132,132,1)]">
                 Novice Unmaker
               </span>

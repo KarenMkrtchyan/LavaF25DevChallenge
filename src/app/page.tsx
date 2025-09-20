@@ -47,7 +47,7 @@ function LoginPage() {
       email,
       options: {
         emailRedirectTo:
-          "http://Karen-devChallenge.vercel.app/dashboard/materials",
+          "http://lava-f25-dev-challenge.vercel.app/dashboard/materials",
       },
     });
 
