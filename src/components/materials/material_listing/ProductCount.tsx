@@ -2,16 +2,23 @@
 import { useState } from "react";
 import "./materials.css";
 import Material from "../../../types/Material";
+import { useAppDispatch, useAppSelector } from "@/store";
+import { updateQuantity } from "@/store/itemsSlice";
 
 export default function ProductCount({ item }: { item: Material }) {
-  const [selectedCount, setSelectedCount] = useState(0);
+  const [selectedCount, setSelectedCount] = useState(item.current);
+  const dispatch = useAppDispatch();
 
   const handleMinusClick = () => {
     setSelectedCount(Math.max(0, selectedCount - 1));
+    dispatch(
+      updateQuantity({ id: item.id, quantity: Math.max(0, selectedCount - 1) })
+    );
   };
 
   const handlePlusClick = () => {
     setSelectedCount(selectedCount + 1);
+    dispatch(updateQuantity({ id: item.id, quantity: selectedCount + 1 }));
   };
 
   return (

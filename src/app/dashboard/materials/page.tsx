@@ -9,11 +9,12 @@ import "./page.css";
 import Material from "@/types/Material";
 
 import { useAppDispatch, useAppSelector } from "@/store";
-import { addItem, updateQuantity, setAll } from "@/store/itemsSlice";
+import { addItem } from "@/store/itemsSlice";
 
 export default function Materials() {
   const [searchTerm, setSearchTerm] = useState("");
   const [tab, setTab] = useState<"inventory" | "queue">("inventory");
+
   const items = useAppSelector((state) => state.items);
   const dispatch = useAppDispatch();
 
