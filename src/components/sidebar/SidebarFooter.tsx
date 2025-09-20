@@ -1,12 +1,18 @@
 // components/SidebarFooter.tsx
 import Image from "next/image";
 import { LogOutIcon, Menu } from "@/components/icons/Icons";
+import { useRouter } from "next/navigation";
 
 export default function SidebarFooter() {
+  const router = useRouter();
+
   return (
     <div className="flex flex-col gap-[8px] p-[6px]">
       {/* Logout button */}
-      <button className="flex flex-row items-center cursor-pointer gap-[8px] p-[6px] hover:bg-gray-100 rounded-md">
+      <button
+        onClick={() => router.push("/")}
+        className="flex flex-row items-center cursor-pointer gap-[8px] p-[6px] hover:bg-gray-100 rounded-md"
+      >
         <LogOutIcon />
         <span className="text-sm font-medium text-[rgb(169,34,34)]">
           Logout
