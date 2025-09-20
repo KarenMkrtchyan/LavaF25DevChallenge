@@ -7,9 +7,9 @@ nav {
   border-right: 1px solid rgb(217, 217, 217);
   padding: 12px;
   justify-content: space-between;
-  width: 64px; /* collapsed (icons only) */
+  width: 64px;
   transition: width 0.25s ease;
-  overflow: hidden; /* clip hidden text */
+  overflow: hidden;
 }
 
 /* expand on hover */
@@ -47,9 +47,15 @@ nav:hover {
 }
 
 .nav_text {
-  display: none;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+  white-space: nowrap;
 }
 
 nav:hover .nav_text {
-  display: inline; /* show text when expanded */
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
 }

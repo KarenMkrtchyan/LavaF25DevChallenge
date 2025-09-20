@@ -14,7 +14,7 @@ export default function SidebarFooter() {
         className="flex flex-row items-center cursor-pointer gap-[8px] p-[6px] hover:bg-gray-100 rounded-md"
       >
         <LogOutIcon />
-        <span className="text-sm font-medium text-[rgb(169,34,34)]">
+        <span className="nav_text text-sm font-medium text-[rgb(169,34,34)]">
           Logout
         </span>
       </button>
@@ -31,8 +31,10 @@ export default function SidebarFooter() {
           />
           <div className="flex justify-between flex-row gap-[10px] ">
             <div className="flex flex-col justify-between">
-              <span className="font-semibold text-[12px]">I won&apos;t!</span>
-              <span className="font-light text-[10px] text-[rgba(132,132,132,1)]">
+              <span className="nav_text font-semibold text-[12px]">
+                I won&apos;t!
+              </span>
+              <span className="nav_text font-light text-[10px] text-[rgba(132,132,132,1)]">
                 Novice Unmaker
               </span>
             </div>
