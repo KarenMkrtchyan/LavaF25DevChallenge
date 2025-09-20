@@ -46,7 +46,8 @@ function LoginPage() {
     const { data, error } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        emailRedirectTo: "http://lava-f25-dev-c.vercel.app/dashboard/materials",
+        emailRedirectTo:
+          "https://lava-f25-dev-challenge.vercel.app/dashboard/materials",
       },
     });
 
