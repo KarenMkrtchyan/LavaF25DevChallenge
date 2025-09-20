@@ -20,25 +20,25 @@ import SidebarFooter from "./SidebarFooter";
 
 const nav = [
   {
-    href: "/materials",
+    href: "/dashboard/materials",
     label: "Materials",
     inactive_icon: <MaterialsIconInactive />,
     active_icon: <MaterialsIconActive />,
   },
   {
-    href: "/products",
+    href: "/dashboard/products",
     label: "Products",
     inactive_icon: <ProductsIconInactive />,
     active_icon: <ProductsIconActive />,
   },
   {
-    href: "/fulfillment",
+    href: "/dashboard/fulfillment",
     label: "Fulfillment",
     inactive_icon: <FulfillmentIconInactive />,
     active_icon: <FulfillmentIconActive />,
   },
   {
-    href: "/integrations",
+    href: "/dashboard/integrations",
     label: "Integrations",
     inactive_icon: <IntegrationsIconInactive />,
     active_icon: <IntegrationsIconActive />,
