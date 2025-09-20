@@ -1,0 +1,39 @@
+// components/SidebarFooter.tsx
+import Image from "next/image";
+import { LogOutIcon, Menu } from "@/components/icons/Icons";
+
+export default function SidebarFooter() {
+  return (
+    <div className="flex flex-col gap-[8px] p-[6px]">
+      {/* Logout button */}
+      <button className="flex flex-row items-center ">
+        <LogOutIcon />
+        <span className="text-sm font-medium">Logout</span>
+      </button>
+
+      {/* Profile section */}
+      <div className="flex flex-row items-center justify-between">
+        <div className="flex flex-row items-center justify-between gap-[8px]">
+          <Image
+            src="/sexyboy.png" // put an image in /public/static/profile.jpg
+            alt="Profile picture"
+            width={40}
+            height={40}
+            className="rounded-full"
+          />
+          <div className="flex justify-between flex-row gap-[10px] ">
+            <div className="flex flex-col justify-between">
+              <span className="font-semibold text-[12px]">Don’t Ruin It</span>
+              <span className="font-light text-[10px] text-[rgba(132,132,132,1)]">
+                Pro Crafter
+              </span>
+            </div>
+            <button className="flex justify-center items-center p-1 hover:bg-gray-100 rounded-full">
+              <Menu />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

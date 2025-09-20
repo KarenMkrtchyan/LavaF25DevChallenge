@@ -4,7 +4,7 @@ nav {
   width: 200px;
   height: 100vh;
   background: linear-gradient(to top, rgb(255, 255, 255), rgb(250, 250, 250));
-  border-right: 1px solid var(--border);
+  border-right: 1px solid rgb(217, 217, 217);
   padding: 12px;
   justify-content: space-between;
 }

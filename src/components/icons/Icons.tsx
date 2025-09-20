@@ -13,7 +13,7 @@ import homeInactive from "./Home_Inactive.svg";
 import logOutIcon from "./logOutIcon.svg";
 import linkIcon from "./Link.svg";
 import searchIcon from "./Search_Icon.svg";
-
+import menu from "./Menu.svg";
 import logo from "./Tally_Icon.svg";
 import materialsIconInactiveSvg from "./Sidebar_Icons/Materials_Icon_Inactive.svg";
 import materialsIconActiveSvg from "./Sidebar_Icons/Materials_Icon_active.svg";
@@ -26,6 +26,10 @@ import productsIconInactiveSvg from "./Sidebar_Icons/Products_Icon_Inactive.svg"
 
 export function Logo() {
   return <Image className="w-[36px] h-[36px]" src={logo} alt="Logo icon" />;
+}
+
+export function Menu() {
+  return <Image className="w-[12px] h-[12px]" src={menu} alt="Menu icon" />;
 }
 
 export function LogOutIcon() {

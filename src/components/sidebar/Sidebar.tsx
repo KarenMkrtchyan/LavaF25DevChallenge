@@ -16,6 +16,7 @@ import {
   IntegrationsIconInactive,
 } from "../icons/Icons";
 import "./sidebar.css";
+import SidebarFooter from "./SidebarFooter";
 
 const nav = [
   {
@@ -80,9 +81,7 @@ export default function Sidebar() {
         </div>
       </div>
 
-      <div>
-        <button className="sidebar_button">Logout</button>
-      </div>
+      <SidebarFooter />
     </nav>
   );
 }
