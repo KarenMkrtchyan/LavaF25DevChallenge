@@ -10,3 +10,10 @@ body {
   color: var(--foreground);
   font-family: var(--font-uncut-sans), Arial, Helvetica, sans-serif;
 }
+
+.icon_text {
+  color: #444eaa;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: normal;
+}
