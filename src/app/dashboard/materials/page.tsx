@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import producitListings from "./products.json"; // TODO: Load this from DB
 import MaterialListing from "@/components/materials/material_listing/MaterialListing";
 import SearchBar from "@/components/materials/material_header/SearchBar";
 import CardTitle from "@/components/materials/material_header/cardTitle";

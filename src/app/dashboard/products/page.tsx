@@ -5,17 +5,17 @@ const products = [
   {
     id: 1,
     name: "Red Shirt",
-    image: "/red_shirt.png",
+    image: "/red_shirt_high_quality.png",
   },
   {
     id: 2,
     name: "Black Shirt",
-    image: "/black_shirt.png",
+    image: "/black_shirt_mid.png",
   },
   {
     id: 3,
     name: "White Shirt",
-    image: "./white_shirt.png",
+    image: "/white_shirt_mid.png",
   },
 ];
 
